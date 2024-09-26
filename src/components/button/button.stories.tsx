@@ -6,6 +6,20 @@ const meta = {
   component: Button,
   args: {
     children: 'Button',
+    disabled: false,
+    variant: 'primary',
+  },
+  argTypes: {
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    variant: {
+      control: {
+        type: 'select',
+      },
+    },
   },
 } satisfies Meta;
 
