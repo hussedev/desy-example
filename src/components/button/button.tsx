@@ -1,5 +1,11 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ComponentProps } from 'react';
 
-export const Button = (props: ButtonHTMLAttributes<HTMLButtonElement>) => {
-  return <button {...props} />;
+import styles from './button.module.css';
+
+export type ButtonProps = ComponentProps<'button'> & {
+  variant?: 'primary' | 'secondary' | 'destructive';
+};
+
+export const Button = (props: ButtonProps) => {
+  return <button className={styles.button} {...props} />;
 };
