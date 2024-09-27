@@ -48,3 +48,23 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof TextArea>;
+
+export const Default: Story = {};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
+};
+
+export const Required: Story = {
+  args: {
+    required: true,
+  },
+};
+
+export const WithCount: Story = {
+  args: {
+    maxLength: 140,
+  },
+};
