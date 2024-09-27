@@ -7,6 +7,14 @@ const meta = {
   args: {
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
   },
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: ['primary', 'information', 'success', 'warning', 'danger'],
+      },
+    },
+  },
 } satisfies Meta;
 
 export default meta;
