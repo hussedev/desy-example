@@ -1,7 +1,24 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { Meta, ColorPalette, ColorItem, Title } from '@storybook/blocks';
 import { colors } from './tokens/colors';
 
 <Meta title="Colors" />
+
+<Title>Color Palette</Title>
+
+## Brand Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="Brand Colors"
+    colors={{
+      Subtle: '#a5b4fc',
+      Default: '#4f46e5',
+    }}
+  />
+</ColorPalette>
+
+## Tailwind Colors
 
 <ColorPalette>
   {Object.entries(colors).map(([name, value]) => (
