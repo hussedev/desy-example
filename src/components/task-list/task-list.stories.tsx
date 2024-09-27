@@ -8,3 +8,5 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof TaskList>;
+
+export const Default: Story = {};
