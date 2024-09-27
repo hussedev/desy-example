@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 
-export type ButtonVariants = VariantProps<typeof variants>;
+export type ButtonVariants = VariantProps<typeof buttonVariants>;
 
-export const variants = cva(
+export const buttonVariants = cva(
   [
     'font-semibold',
     'border',
