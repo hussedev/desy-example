@@ -83,12 +83,12 @@ export const LengthTooLong: Story = {
   args: {
     maxLength: 140,
   },
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement);
     const textArea = canvas.getByRole('textbox');
     const count = canvas.getByTestId('length');
 
-    const inputValue = 'Y' + 'o'.repeat(140) + '!';
+    const inputValue = 'Y' + 'o'.repeat(args.maxLength ?? 0) + '!';
 
     await userEvent.type(textArea, inputValue);
     expect(count).toHaveTextContent(inputValue.length.toString());
