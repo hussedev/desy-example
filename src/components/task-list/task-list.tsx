@@ -1,13 +1,13 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Button } from '../button';
 import { Input } from '../input';
 import { Checkbox } from '../checkbox';
-import { TaskListContext } from './task-list-context';
+import { useTaskListContext } from './task-list-context';
 import { Icon } from '../icon';
 
 export const TaskList = () => {
   const [newTask, setNewTask] = useState('');
-  const { tasks, addTask, toggleTask, removeTask, total, incomplete } = useContext(TaskListContext);
+  const { tasks, addTask, toggleTask, removeTask, total, incomplete } = useTaskListContext();
 
   return (
     <main className="space-y-8">

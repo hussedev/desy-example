@@ -1,4 +1,4 @@
-import { PropsWithChildren, createContext, useMemo, useReducer } from 'react';
+import { PropsWithChildren, createContext, useContext, useMemo, useReducer } from 'react';
 
 let id = 0;
 
@@ -49,6 +49,14 @@ export const taskListReducer = (tasks: Task[], action: { type: string; payload: 
 export const TaskListContext = createContext<TaskListContextType>(
   undefined as unknown as TaskListContextType,
 );
+
+export const useTaskListContext = () => {
+  const context = useContext(TaskListContext);
+  if (!context) {
+    throw new Error('useTaskList must be used within a TaskListProvider');
+  }
+  return context;
+};
 
 export const TaskListProvider = ({
   children,
