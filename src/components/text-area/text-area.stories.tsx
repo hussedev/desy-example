@@ -29,7 +29,7 @@ const meta = {
       description: 'Disables the text area',
       table: {
         defaultValue: {
-          summary: false,
+          summary: 'false', // Changed from boolean to string
         },
       },
     },
@@ -39,7 +39,7 @@ const meta = {
       description: 'Marks the text area as required',
       table: {
         defaultValue: {
-          summary: false,
+          summary: 'false',
         },
       },
     },
