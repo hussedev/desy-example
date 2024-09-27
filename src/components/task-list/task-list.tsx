@@ -42,7 +42,12 @@ export const TaskList = () => {
               onChange={() => toggleTask(task.id)}
               className="w-full rounded-md px-2 py-2 hover:bg-slate-100 dark:hover:bg-slate-700"
             />
-            <Button variant="destructive" size="small" onClick={() => removeTask(task.id)}>
+            <Button
+              title="Remove task"
+              variant="destructive"
+              size="small"
+              onClick={() => removeTask(task.id)}
+            >
               <Icon type="x" />
             </Button>
           </div>
