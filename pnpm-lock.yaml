@@ -77,6 +77,9 @@ importers:
       axe-playwright:
         specifier: 2.0.1
         version: 2.0.1(playwright@1.47.2)
+      chromatic:
+        specifier: ^11.10.4
+        version: 11.10.4
       class-variance-authority:
         specifier: 0.7.0
         version: 0.7.0
