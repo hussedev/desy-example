@@ -20,4 +20,11 @@ const preview: Preview = {
   ],
 };
 
+// NOTE: Example of global loaders
+// export const loaders = [
+//   async () => ({
+//     userData: await fetch('/api/user').then((res) => res.json()),
+//   }),
+// ];
+
 export default preview;
