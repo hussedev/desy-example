@@ -16,11 +16,23 @@ const meta = {
       name: 'Label',
       control: 'text',
       description: 'Text to display on the button',
-      table: { disable: true },
     },
-    size: { control: 'select', options: ['small', 'medium', 'large'] },
-    disabled: { control: 'boolean' },
-    variant: { control: 'select' },
+    variant: {
+      name: 'Variant',
+      description: 'Variant of the button',
+      control: 'select',
+    },
+    size: {
+      name: 'Size',
+      control: 'select',
+      description: 'Size of the button',
+      options: ['small', 'medium', 'large'],
+    },
+    disabled: {
+      name: 'Disabled',
+      control: 'boolean',
+      description: 'Disables the button',
+    },
   },
 } satisfies Meta;
 
