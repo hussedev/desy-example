@@ -26,6 +26,8 @@ const meta = {
         defaultValue: {
           summary: 'primary',
         },
+        category: 'style',
+        subcategory: 'Purpose',
       },
     },
     size: {
@@ -37,6 +39,8 @@ const meta = {
         defaultValue: {
           summary: 'medium',
         },
+        category: 'style',
+        subcategory: 'Size',
       },
     },
     disabled: {
@@ -48,6 +52,7 @@ const meta = {
           summary: 'false',
           detail: 'Defers to the built-in HTML attribute.',
         },
+        category: 'accessibility',
       },
     },
   },
