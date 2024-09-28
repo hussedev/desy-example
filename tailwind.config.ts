@@ -16,6 +16,16 @@ export default {
       fontFamily: {
         sans: ['Inter Variable', 'sans-serif'],
       },
+      colors: {
+        primary: colors.primary,
+        secondary: colors.secondary,
+        warning: colors.warning,
+        danger: colors.danger,
+        info: colors.information,
+        surface: colors.slate,
+        success: colors.success,
+        accent: colors.accent,
+      },
     },
   },
   plugins: [],
