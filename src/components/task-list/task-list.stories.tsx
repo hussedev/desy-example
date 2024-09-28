@@ -15,11 +15,10 @@ const meta = {
     },
   ],
   decorators: [
-    (Story, context) => {
-      console.log(context);
+    (Story, { loaded }) => {
       return (
-        <TaskListProvider tasks={context.loaded.tasks}>
-          <Story {...context} />
+        <TaskListProvider tasks={loaded.tasks}>
+          <Story />
         </TaskListProvider>
       );
     },
