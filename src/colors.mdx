@@ -5,21 +5,6 @@ import { colors } from './tokens/colors';
 
 <Title>Color Palette</Title>
 
-## Brand Colors
-
-<ColorPalette>
-  <ColorItem
-    title="Brand"
-    subtitle="Brand Colors"
-    colors={{
-      Subtle: '#a5b4fc',
-      Default: '#4f46e5',
-    }}
-  />
-</ColorPalette>
-
-## Tailwind Colors
-
 <ColorPalette>
   {Object.entries(colors).map(([name, value]) => (
     <ColorItem key={name} title={name} colors={value} />

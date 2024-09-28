@@ -1,4 +1,16 @@
-export const colors = {
+import { Colors } from './types';
+import { generateColorPalette } from './utils';
+
+const extraColors: Colors = {
+  brand: {
+    '300': '#a5b4fc',
+    '500': '#6366f1',
+    '600': '#4f46e5',
+    '900': '#312e81',
+  },
+};
+
+const baseColors: Colors = {
   primary: {
     '50': '#faf7fd',
     '100': '#f2ecfb',
@@ -103,9 +115,24 @@ export const colors = {
     '900': '#343a46',
     '950': '#23272e',
   },
+  ...extraColors,
 };
+
+// const colorKeys = ['accent', 'primary', 'danger', 'success', 'warning', 'information', 'slate'];
+// const shades = ['50', '100', '300', '500', '600', '900'];
+
+const colorKeys: string[] = [];
+const shades: string[] = [];
 
 export const white = '#ffffff';
 export const black = '#010209';
 export const transparent = 'transparent';
 export const currentColor = 'currentColor';
+
+const palette = generateColorPalette({
+  baseColors,
+  colorKeys,
+  shades,
+});
+
+export const colors = { ...palette, transparent, currentColor, white, black };
