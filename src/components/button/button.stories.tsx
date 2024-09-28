@@ -16,6 +16,7 @@ const meta = {
       name: 'Label',
       control: 'text',
       description: 'Text to display on the button',
+      table: { disable: true },
     },
     variant: {
       name: 'Variant',
