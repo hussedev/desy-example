@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run storybook",
-    "test": "npx test-storybook",
+    "test": "test-storybook",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write --ignore-unknown .",
@@ -13,7 +13,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
-    "chromatic": "npx chromatic"
+    "chromatic": "chromatic"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
