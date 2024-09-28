@@ -22,17 +22,33 @@ const meta = {
       name: 'Variant',
       description: 'Variant of the button',
       control: 'select',
+      table: {
+        defaultValue: {
+          summary: 'primary',
+        },
+      },
     },
     size: {
       name: 'Size',
       control: 'select',
       description: 'Size of the button',
       options: ['small', 'medium', 'large'],
+      table: {
+        defaultValue: {
+          summary: 'medium',
+        },
+      },
     },
     disabled: {
       name: 'Disabled',
       control: 'boolean',
       description: 'Disables the button',
+      table: {
+        defaultValue: {
+          summary: 'false',
+          detail: 'Defers to the built-in HTML attribute.',
+        },
+      },
     },
   },
 } satisfies Meta;
