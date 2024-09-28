@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
+import { expect, within } from '@storybook/test';
 
 const meta = {
   title: 'Components/Button',
@@ -30,6 +31,26 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     variant: 'primary',
+  },
+  play: ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    expect(button.tagName).toBe('BUTTON');
+  },
+};
+
+export const ButtonAsLink: Story = {
+  args: {
+    href: 'https://example.com',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = await canvas.findByText('Button');
+
+    expect(button.tagName).toBe('A');
+    expect(button).toHaveRole('link');
+    expect(button).toHaveAttribute('href', 'https://example.com');
   },
 };
 
