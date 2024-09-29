@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { initialize, mswLoader } from 'msw-storybook-addon';
+import { handlers } from '../src/mocks/handlers';
 
 initialize();
 
@@ -12,6 +13,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    msw: {
+      handlers,
     },
   },
   decorators: [
