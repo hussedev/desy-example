@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { TaskList } from './task-list';
 import { TaskListProvider } from './task-list-context';
+import { taskListHandler, taskListHandlerWithError } from '../../mocks/handlers';
 
 const meta = {
   title: 'Components/TaskList',
@@ -29,3 +30,19 @@ export default meta;
 type Story = StoryObj<typeof TaskList>;
 
 export const Default: Story = {};
+
+export const WithMockedTasks: Story = {
+  parameters: {
+    msw: {
+      handlers: [taskListHandler],
+    },
+  },
+};
+
+export const WithFetchError: Story = {
+  parameters: {
+    msw: {
+      handlers: [taskListHandlerWithError],
+    },
+  },
+};
