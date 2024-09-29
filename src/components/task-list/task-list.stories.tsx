@@ -31,6 +31,12 @@ type Story = StoryObj<typeof TaskList>;
 
 export const Default: Story = {};
 
+export const WithoutGlobalMockedTasks: Story = {
+  parameters: {
+    msw: { handlers: [] },
+  },
+};
+
 export const WithMockedTasks: Story = {
   parameters: {
     msw: {
